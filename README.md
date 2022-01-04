@@ -2,6 +2,15 @@
 
 Assists in testing **ValueListenable** objects (ex: **ValueNotifier**).
 
+## install
+
+Added in your `pubspec.yaml` as **dev dependency**:
+
+```yaml
+dev_dependencies:
+  value_listenable_test: any
+```
+
 ## Examples
 
 Listen the emits of ValueListenable:
