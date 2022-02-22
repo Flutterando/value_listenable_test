@@ -5,9 +5,7 @@ import 'package:value_listenable_test/value_listenable_test.dart';
 class MockCounter extends MockValueListenable<int> {}
 
 void main() {
-  late MockCounter counter;
-
-  setUp(() => counter = MockCounter());
+  final counter = MockCounter();
 
   group('MockValueListenable', () {
     test('is compatible with when', () {
