@@ -43,6 +43,8 @@ void whenListen<ValueType>(
   List<ValueType> values = const [],
   ValueType? initialValue,
 }) {
+  assert(initialValue != null || values.isNotEmpty,
+      'must be passed the initialValue or one item in values');
   if (initialValue != null) {
     when((() => valueListenable.value)).thenReturn(initialValue);
   }

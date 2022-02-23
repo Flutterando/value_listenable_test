@@ -64,5 +64,16 @@ void main() {
       await Future.delayed(Duration.zero);
       expect(counter.value, 0);
     });
+
+    test('throws assert error if initialValue is null and values is empty',
+        () async {
+      expect(
+        () => whenListen(
+          counter,
+          input: counter.increment,
+        ),
+        throwsAssertionError,
+      );
+    });
   });
 }
