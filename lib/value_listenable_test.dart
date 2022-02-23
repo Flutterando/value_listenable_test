@@ -9,6 +9,7 @@ import 'package:meta/meta.dart';
 import 'package:test_api/src/expect/async_matcher.dart';
 
 export 'src/mock_value_listenable.dart';
+export 'src/when_listen.dart';
 
 /// Listen the emits of ValueListenable
 ///
