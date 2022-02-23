@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:mocktail/mocktail.dart';
 
-/// Extend or mixin this class to mark the implementation as a [MockValueListenable].
+/// Extend this class to mark the implementation as a [MockValueListenable].
 ///
 /// A mocked value listenable implements all fields and methods with a default
 /// implementation that does not throw a [NoSuchMethodError],
