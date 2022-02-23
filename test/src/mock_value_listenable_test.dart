@@ -28,6 +28,7 @@ void main() {
 
     test('not notify removed listeners', () {
       int value = 0;
+      // ignore: prefer_function_declarations_over_variables
       final listener = () => value += counter.value;
       counter.addListener(listener);
 
