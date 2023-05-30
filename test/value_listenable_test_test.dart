@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:value_listenable_test/value_listenable_test.dart';
@@ -22,4 +23,21 @@ void main() {
     },
     expect: () => [3, equals(5), isA<int>()],
   );
+  valueListenableTest<Counter>(
+    'Test Counter',
+    build: () => Counter(),
+    act: (notifier) {
+      notifier.increment();
+      notifier.increment();
+      notifier.decrement();
+    },
+    expect: () => [equals(1), 2, isA<int>()],
+  );
+}
+
+class Counter extends ValueNotifier<int> {
+  Counter() : super(0);
+
+  increment() => value++;
+  decrement() => value--;
 }
