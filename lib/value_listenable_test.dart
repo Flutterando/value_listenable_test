@@ -8,6 +8,9 @@ import 'package:meta/meta.dart';
 // ignore: implementation_imports
 import 'package:test_api/src/expect/async_matcher.dart';
 
+export 'src/mock_value_listenable.dart';
+export 'src/when_listen.dart';
+
 /// Listen the emits of ValueListenable
 ///
 /// ```dart
@@ -72,7 +75,8 @@ FutureOr<void> valueListenableTest<T extends ValueListenable>(
   flutter_test.test(description, () async {
     final notifier = build();
     final expected = expect?.call();
-    final future = flutter_test.expectLater(notifier, emitValues(expected ?? []));
+    final future =
+        flutter_test.expectLater(notifier, emitValues(expected ?? []));
     act?.call(notifier);
     await future;
     verify?.call(notifier);
